@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Radium from 'radium';
-import { View } from './components';
-import { generateStylesSelector } from './utils/selectors';
+import { View } from 'view/global/components';
+import { generateStylesSelector } from 'view/global/utils/selectors';
 
 function generateStyles(theme) {
   return {}
 }
-class Root extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
   }
@@ -16,16 +15,11 @@ class Root extends Component {
     const { gstyles, theme, styles } = this.props;
     return (
       <View>
-        hi
+        I'm Browser
       </View>
     );
   }
 }
-
-Root.propTypes = {
-  gstyles: PropTypes.object,
-  theme: PropTypes.object,
-};
 
 const stylesSelector = generateStylesSelector(generateStyles);
 function mapStateToProps(state, ownProps) {
@@ -38,4 +32,4 @@ function mapStateToProps(state, ownProps) {
 
 export default connect(
   mapStateToProps,
-)(Radium(Root));
+)(Radium(App));

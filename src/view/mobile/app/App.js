@@ -1,8 +1,3 @@
-Add this to snippets
-
-RCT
-----
-```
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Radium from 'radium';
@@ -12,7 +7,7 @@ import { generateStylesSelector } from 'view/global/utils/selectors';
 function generateStyles(theme) {
   return {}
 }
-class $1 extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
   }
@@ -20,6 +15,7 @@ class $1 extends Component {
     const { gstyles, theme, styles } = this.props;
     return (
       <View>
+        I'm Mobile
       </View>
     );
   }
@@ -36,5 +32,4 @@ function mapStateToProps(state, ownProps) {
 
 export default connect(
   mapStateToProps,
-)(Radium($1));
-```
+)(Radium(App));

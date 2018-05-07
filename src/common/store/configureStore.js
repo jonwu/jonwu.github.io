@@ -3,10 +3,10 @@ import { composeWithDevTools } from 'remote-redux-devtools';
 import thunk from 'redux-thunk';
 import { persistStore, persistReducer, createTransform } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web and AsyncStorage for react-native
-import rootReducer from './reducers';
-import collections from './utils/themes';
-import gstyles from './utils/gstyles';
-import middleware from './middleware';
+import rootReducer from 'common/reducers/rootReducer';
+import collections from 'common/utils/themes';
+import gstyles from 'common/utils/gstyles';
+import middleware from 'common/middlewares/middleware';
 
 const transform = createTransform(
   (inboundState, key) => {
@@ -40,6 +40,6 @@ const enhancer = composeWithDevTools(applyMiddleware(thunk, middleware));
 
 export default initialState => {
   let store = createStore(persistedReducer, initialState, enhancer);
-  let persistor = persistStore(store);
+  let persistor = persistStore(store); // .purge() to clear
   return { store, persistor };
 };

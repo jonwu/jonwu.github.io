@@ -6,7 +6,7 @@ class View extends Component {
   constructor(props, context) {
     super(props);
   }
-  
+
   render() {
     const { style, row, className, onClick, onMouseOver, onMouseDown, dataTip, id } = this.props;
     const flexStyle = {
@@ -28,15 +28,5 @@ class View extends Component {
     );
   }
 }
-
-View.contextTypes = {
-  gstyles: PropTypes.object,
-  theme: PropTypes.object,
-};
-
-View.propTypes = {
-  style: PropTypes.object,
-  row: PropTypes.bool,
-};
 
 export default Radium(View);

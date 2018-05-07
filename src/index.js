@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './browser/app/Root';
+import Root from './view/Root';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 

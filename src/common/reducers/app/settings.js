@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import * as ActionTypes from './actionTypes';
-import collections from '../utils/themes';
-import generateStyles from '../utils/gstyles';
+import collections from 'common/utils/themes';
+import generateStyles from 'common/utils/gstyles';
 
 function theme(state = collections[1], action) {
   switch (action.type) {
