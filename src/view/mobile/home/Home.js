@@ -3,12 +3,11 @@ import { connect } from 'react-redux';
 import Radium from 'radium';
 import { View, RouteWithSubRoutes } from 'view/global/components';
 import { generateStylesSelector } from 'view/global/utils/selectors';
-import routes from './routes';
 
 function generateStyles(theme) {
   return {}
 }
-class App extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
   }
@@ -16,11 +15,7 @@ class App extends Component {
     const { gstyles, theme, styles } = this.props;
     return (
       <View>
-        {/*  Top Bar here */}
-        {routes.map((route, i) => {
-          return <RouteWithSubRoutes key={i} {...route} />;
-        })}
-        {/*  Bottom Bar here */}
+        I'm a Mobile
       </View>
     );
   }
@@ -37,4 +32,4 @@ function mapStateToProps(state, ownProps) {
 
 export default connect(
   mapStateToProps,
-)(Radium(App));
+)(Radium(Home));

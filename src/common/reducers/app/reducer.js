@@ -1,4 +1,7 @@
 import { combineReducers } from 'redux';
 import * as ActionTypes from './actionTypes';
 
-export default combineReducers({})
+function test(state = {}, actions) {
+  return state;
+}
+export default combineReducers({ test });
