@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     const { gstyles, theme, styles } = this.props;
     return (
-      <View>
+      <View style={{height: '100%'}}>
         {/*  Top Bar here */}
         {routes.map((route, i) => {
           return <RouteWithSubRoutes key={i} {...route} />;

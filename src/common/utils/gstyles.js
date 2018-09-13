@@ -5,6 +5,7 @@ export default theme => {
       flex: 1,
     },
     p1: {
+      lineHeight: 1.5,
       color: theme.text(),
       fontSize: theme.regular,
     },
