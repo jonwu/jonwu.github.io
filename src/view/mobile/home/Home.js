@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { View } from 'view/global/components';
 import Radium from 'radium';
-import { View, RouteWithSubRoutes } from 'view/global/components';
-import { generateStylesSelector } from 'view/global/utils/selectors';
+import Cover from './Cover';
+import Hobby from './Hobby';
+import Projects from './Projects';
+import Contacts from './Contacts';
 
-function generateStyles(theme) {
-  return {}
-}
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -14,22 +14,32 @@ class Home extends Component {
   render() {
     const { gstyles, theme, styles } = this.props;
     return (
-      <View>
-        I'm a Mobile
-      </View>
+      <div style={{ height: '100%', overflow: 'auto' }}>
+        <View style={{ alignItems: 'center' }}>
+          <Cover />
+
+          {/* <Hobby /> */}
+          <Projects />
+          <div
+            style={{
+              alignSelf: 'center',
+              padding: theme.spacing_2,
+              marginTop: 100,
+              marginBottom: 20,
+            }}>
+            <Contacts />
+          </div>
+        </View>
+      </div>
     );
   }
 }
 
-const stylesSelector = generateStylesSelector(generateStyles);
 function mapStateToProps(state, ownProps) {
   return {
     theme: state.settings.theme,
     gstyles: state.settings.gstyles,
-    styles: stylesSelector(state.settings.theme),
   };
 }
 
-export default connect(
-  mapStateToProps,
-)(Radium(Home));
+export default connect(mapStateToProps)(Radium(Home));

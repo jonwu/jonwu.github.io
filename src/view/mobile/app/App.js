@@ -4,6 +4,7 @@ import Radium from 'radium';
 import { View, RouteWithSubRoutes } from 'view/global/components';
 import { generateStylesSelector } from 'view/global/utils/selectors';
 import routes from './routes';
+import Home from '../home/Home';
 
 function generateStyles(theme) {
   return {}
@@ -17,9 +18,10 @@ class App extends Component {
     return (
       <View>
         {/*  Top Bar here */}
-        {routes.map((route, i) => {
+        <Home/>
+        {/* {routes.map((route, i) => {
           return <RouteWithSubRoutes key={i} {...route} />;
-        })}
+        })} */}
         {/*  Bottom Bar here */}
       </View>
     );

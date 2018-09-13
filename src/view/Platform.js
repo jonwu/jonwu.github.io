@@ -21,7 +21,7 @@ export default class Platform extends React.Component {
 
   render() {
     const { width } = this.state;
-    const isMobile = width <= 500;
-    return false ? <Mobile /> : <Browser />;
+    const isMobile = width <= 1024;
+    return isMobile ? <Mobile /> : <Browser />;
   }
 }
