@@ -22,7 +22,7 @@ const Contact = props => {
           },
           gstyles.right_3,
         ]}>
-        <div style={[gstyles.footnote_bold, { color: theme.text() }]}>{label}</div>
+        <div style={[gstyles.caption, { fontFamily: 'Brandon-Med', color: theme.text() }]}>{label}</div>
       </View>
     </a>
   );

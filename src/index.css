@@ -3,6 +3,11 @@
   src: url('./view/global/assets/fonts/Brandon_light.otf') format('opentype');
   font-style: normal;
 }
+@font-face {
+  font-family: Brandon-Med;
+  src: url('./view/global/assets/fonts/Brandon_reg.otf') format('opentype');
+  font-style: normal;
+}
 
 @font-face {
   font-family: Brandon;

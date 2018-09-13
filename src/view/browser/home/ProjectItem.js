@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { View } from 'view/global/components';
 import Radium from 'radium';
 
+
 const Tag = props => {
   const { gstyles, theme, styles, label } = props;
   return (

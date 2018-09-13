@@ -4,6 +4,7 @@ import { View, ListView } from 'view/global/components';
 import Radium from 'radium';
 import ProjectItem from './ProjectItem';
 import projects from 'view/global/utils/projects';
+import Zoom from 'react-reveal/Zoom';
 
 class Projects extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Projects extends Component {
   render() {
     const { gstyles, theme, styles } = this.props;
     return (
-      <View>
+      <Zoom>
         <ListView
           data={projects}
           renderHeaderComponent={() => <div style={{ height: theme.spacing_1 * 2 }} />}
@@ -21,7 +22,7 @@ class Projects extends Component {
             return <ProjectItem {...project} />;
           }}
         />
-      </View>
+      </Zoom>
     );
   }
 }

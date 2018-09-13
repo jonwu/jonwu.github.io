@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { View } from 'view/global/components';
 import Radium from 'radium';
 import Contacts from './Contacts';
+import Bounce from 'react-reveal/Bounce';
 
 class Cover extends Component {
   constructor(props) {
@@ -28,9 +29,9 @@ class Cover extends Component {
 
         <View
           style={{ zIndex: 1, flex: 1, width: 500, justifyContent: 'center', marginTop: -100, paddingLeft: 100 }}>
-          <div style={[gstyles.h1, { color: theme.light(), marginBottom: 100 }]}>Hi! 👋</div>
+          <Bounce left><div style={[gstyles.h1, { color: theme.light(), marginBottom: 100 }]}>Hello Friend! 👋</div></Bounce>
           <div style={[gstyles.h1, { color: theme.light() }, gstyles.bottom_1]}>
-            I'm <span style={[gstyles.h1_bold, { color: theme.light() }]}>Jonathan Wu</span>. I build Apps For Businesses & For Fun
+            I'm <span style={[gstyles.h1_bold, { color: theme.light() }]}>Jonathan Wu</span>. I build apps for businesses & for fun
           </div>
 
           {/* <div style={[gstyles.h4, { lineHeight: 2, color: theme.light(0.75) }]}><span style={[{ fontSize: 30, color: theme.light() }]}>🙈</span> Managed apps with over 100,000 weekly actives</div> */}
