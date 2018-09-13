@@ -8,7 +8,7 @@ const projects = [
   },
   {
     title: 'Blitz Fortnite',
-    description: 'A lightweight widget for Fortnite that tracks kills and leaderboard in real-time',
+    description: 'A lightweight widget for Fortnite that tracks kills and leaderboard in real-time.',
     src: require('view/global/assets/Landing.png'),
     tags: ['React', 'Electron'],
   },
@@ -22,7 +22,7 @@ const projects = [
   {
     title: 'Yosemite Camp Tracker',
     caption: 'PERSONAL APP',
-    description: 'Sold-out campgrounds open up every day! This app scans for cancelations and notifies you when a popular campground is available.',
+    description: 'Sold-out campgrounds open up every day! This app scans for cancellations and notifies you when a popular campground is available.',
     src: require('view/global/assets/camptracker.png'),
     tags: ['React Native', 'iOS', 'Python', 'NodeJS'],
   },

@@ -17,17 +17,18 @@ class Cover extends Component {
           backgroundColor: theme.text(),
           position: 'relative',
           height: 876,
+          overflow: 'hidden',
           // alignItems: 'center',
           // justifyContent: 'center',
         }}>
         <img
           src={require(`view/global/assets/meFaded.jpg`)}
-          style={{ height: '100%',position: 'absolute', alignSelf: 'flex-end' }}
+          style={{ height: '100%', marginLeft: 250, position: 'absolute', alignSelf: 'flex-end' }}
         />
 
         <View
           style={{ zIndex: 1, flex: 1, width: 500, justifyContent: 'center', marginTop: -100, paddingLeft: 100 }}>
-          <div style={[gstyles.h1, { color: theme.light(), marginBottom: 100 }]}>Hi!</div>
+          <div style={[gstyles.h1, { color: theme.light(), marginBottom: 100 }]}>Hi! 👋</div>
           <div style={[gstyles.h1, { color: theme.light() }, gstyles.bottom_1]}>
             I'm <span style={[gstyles.h1_bold, { color: theme.light() }]}>Jonathan Wu</span>. I build Apps For Businesses & For Fun
           </div>
