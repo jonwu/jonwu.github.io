@@ -31,14 +31,14 @@ class ProjectItem extends Component {
   render() {
     const { gstyles, theme, styles, title, caption, description, src, flipped, tags } = this.props;
     return (
-      <View>
+      <View style={{alignItems: 'center'}}>
         <View style={{ width: 250, padding: theme.spacing_2, paddingTop: 0 }}>
           <div style={[gstyles.h3_bold, { color: theme.text() }]}>{title}</div>
           <div style={[gstyles.p1_bold, { color: theme.text(0.25) }, gstyles.bottom_2]}>
             {caption}
           </div>
           {description && (
-            <div style={[gstyles.p1, { color: theme.text() }, gstyles.bottom_1]}>{description}</div>
+            <div style={[gstyles.p1, { color: theme.text() }, gstyles.bottom_2]}>{description}</div>
           )}
 
           <View row style={{ flexStyle: 'flex-wrap' }}>
@@ -47,7 +47,7 @@ class ProjectItem extends Component {
             })}
           </View>
         </View>
-        <img src={src} style={{ width: '100%' }} />
+        <img src={src} style={[{ width: '100%' }, gstyles.top_1]} />
       </View>
     );
   }
