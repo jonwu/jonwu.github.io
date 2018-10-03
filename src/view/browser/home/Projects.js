@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { View, ListView } from 'view/global/components';
-import Radium from 'radium';
-import ProjectItem from './ProjectItem';
-import projects from 'view/global/utils/projects';
-import Zoom from 'react-reveal/Zoom';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { View, ListView } from "view/global/components";
+import Radium from "radium";
+import ProjectItem from "./ProjectItem";
+import projects from "view/global/utils/projects";
 
 class Projects extends Component {
   constructor(props) {
@@ -13,16 +12,16 @@ class Projects extends Component {
   render() {
     const { gstyles, theme, styles } = this.props;
     return (
-      <Zoom>
-        <ListView
-          data={projects}
-          renderHeaderComponent={() => <div style={{ height: theme.spacing_1 * 2 }} />}
-          renderSeparatorComponent={() => <div style={{ height: 100 }} />}
-          renderItem={project => {
-            return <ProjectItem {...project} />;
-          }}
-        />
-      </Zoom>
+      <ListView
+        data={projects}
+        renderHeaderComponent={() => (
+          <div style={{ height: theme.spacing_1 * 2 }} />
+        )}
+        renderSeparatorComponent={() => <div style={{ height: 100 }} />}
+        renderItem={project => {
+          return <ProjectItem {...project} />;
+        }}
+      />
     );
   }
 }
@@ -30,7 +29,7 @@ class Projects extends Component {
 function mapStateToProps(state, ownProps) {
   return {
     theme: state.settings.theme,
-    gstyles: state.settings.gstyles,
+    gstyles: state.settings.gstyles
   };
 }
 
