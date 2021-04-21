@@ -2,7 +2,7 @@
   "name": "react-starter",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jonwu.github.io/jonwu.github.io",
+  "homepage": ".",
   "dependencies": {
     "axios": "^0.18.0",
     "history": "^4.7.2",
